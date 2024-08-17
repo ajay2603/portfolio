@@ -1,50 +1,53 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import { CiShare1 } from "react-icons/ci";
-import { FaDownload,FaGithub } from "react-icons/fa";
+import { FaDownload, FaGithub } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Projects = ({darkMode}) => {
+const Projects = ({ darkMode }) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
-    <div id="projects" className={`min-h-screen py-12 ${darkMode? "bg-white":""} bg-gray-800 `} >
-      <h1 className={`mb-12 text-4xl font-semibold text-center  ${darkMode ? "text-gray-800 " : "text-white"}  lg:text-5xl xl:text-6xl`}>
+    <div
+      id="projects"
+      className={`min-h-screen py-12 px-6 ${
+        darkMode ? "bg-white" : ""
+      } bg-gray-800 `}>
+      <h1
+        className={`mb-12 text-4xl font-semibold text-center  ${
+          darkMode ? "text-gray-800 " : "text-white"
+        }  lg:text-5xl xl:text-6xl`}>
         Projects
       </h1>
       <div className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-2">
         {/* Card 1 */}
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
-          data-aos="fade-up"
-        >
+          data-aos="fade-up">
           <img
-            src="/assets/department.png"
+            src="/assets/projects/quiz.png"
             alt="Project 1"
-            className="object-cover w-1/3 h-auto max-w-full rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg"
+            className="object-cover w-1/3 h-auto max-w-full p-3 rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg"
           />
           <div className="flex flex-col justify-center w-2/3 p-4">
-            <h2 className="mb-4 text-xl font-semibold text-white">
-              Department Website
-            </h2>
-            <p className="mb-4 text-sm text-white text-justify">
-              I've initiated a web-based leave application system tailored for
-              college students to request holidays from the department head.
-              Users can input details, and the system generates a leave letter.
-              Additionally, students can conveniently track the status of their
-              request, whether it's approved or rejected.
+            <h2 className="mb-4 text-xl font-semibold text-white">My-Quiz</h2>
+            <p className="mb-4 text-sm text-justify text-white">
+              My quiz app, powered by Express.js, EJS, MongoDB, and Socket.io,
+              hosts online static and live quizzes. With MongoDB for efficient
+              data management and Socket.io for real-time interactions during
+              live quizzes, the platform provides a seamless experience for
+              users engaging in both static and dynamic quiz formats.
             </p>
             <a
-              href="https://srkrcse.com/"
+              href="https://github.com/ajay2603/My_Quiz"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
-                <CiShare1 />
-                Visit
+                <FaGithub />
+                Repo
               </button>
             </a>
           </div>
@@ -54,33 +57,36 @@ const Projects = ({darkMode}) => {
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
-          data-aos-delay="200"
-        >
+          data-aos-delay="400">
           <img
-            src="/assets/chat.png"
-            alt="Project 2"
-            className="object-contain w-1/3 h-auto max-w-full rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg"
+            src="/assets/projects/email.png"
+            alt="Project 3"
+            className="object-cover w-1/3 h-auto max-w-full rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg"
           />
           <div className="flex flex-col justify-center w-2/3 p-4">
-            <h2 className="mb-4 text-xl font-semibold text-white">Chat App</h2>
-            <p className="mb-4 text-sm text-white text-justify">
-              The Firebase Chat Application is a real-time messaging platform
-              that allows users to engage in group conversations and manage
-              their messages efficiently. Built on Firebase, a powerful platform
-              for developing web and mobile applications, this chat application
-              provides seamless real-time communication with features such as
-              group messaging and message deletion.
+            <h2 className="mb-4 text-xl font-semibold text-white">
+              Email Link Verification
+            </h2>
+            <p className="mb-4 text-sm text-justify text-white">
+              Email Link Verification ensures the authenticity of user
+              registrations by requiring users to confirm their email addresses.
+              After registration, users receive a verification email with a
+              unique link. Clicking this link verifies their email address and
+              completes the registration process, ensuring that only valid and
+              confirmed accounts are created. This step helps in maintaining the
+              integrity of user accounts and preventing fraud.
             </p>
-            <a
-              href="https://googlechat.netlify.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
-                <CiShare1 />
-                Visit
-              </button>
-            </a>
+            <div className="flex justify-between">
+              <a
+                href="https://github.com/ajay2603/Email_link_verification"
+                target="_blank"
+                rel="noopener noreferrer">
+                <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
+                  <FaGithub />
+                  Repo
+                </button>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -88,32 +94,32 @@ const Projects = ({darkMode}) => {
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
-          data-aos-delay="400"
-        >
+          data-aos-delay="400">
           <img
-            src="/assets/cheif.png"
+            src="/assets/projects/safesprout.png"
             alt="Project 3"
-            className="object-contain w-1/3 h-auto max-w-full rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg"
+            className="object-contain w-1/3 h-auto max-w-full p-3 rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg "
           />
           <div className="flex flex-col justify-center w-2/3 p-4">
             <h2 className="mb-4 text-xl font-semibold text-white">
-              Recipe App
+              SafeSprout
             </h2>
-            <p className="mb-4 text-sm text-white text-justify">
-              Discover a world of culinary delights with our <b>React Native</b>{" "}
-              recipe app! Explore a vast collection of recipes, each with
-              ingredients, instructions, and mouth-watering images. Easily find
-              related recipes and expand your culinary skills on the go!
+            <p className="mb-4 text-sm text-justify text-white">
+              SafeSprout is a cross-platform mobile application developed with
+              Flutter that focuses on child tracking and safety. It integrates
+              with a backend built using Node.js, Express.js, and MongoDB to
+              provide real-time updates and secure data management, offering
+              parents peace of mind with features like location tracking and
+              alerts.
             </p>
             <div className="flex justify-between">
               <a
-                href="https://expo.dev//accounts/tarun_sai_srinivas/projects/recipes/builds/364c7b9c-e792-44fe-baff-5534a4d341f8"
+                href="https://github.com/ajay2603/safe-sprout"
                 target="_blank"
-                rel="noopener noreferrer"
-              >
+                rel="noopener noreferrer">
                 <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
-                  <FaDownload />
-                  Install
+                  <FaGithub />
+                  Repo
                 </button>
               </a>
             </div>
@@ -123,36 +129,31 @@ const Projects = ({darkMode}) => {
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
-          data-aos-delay="400"
-        >
+          data-aos-delay="200">
           <img
-            src="/assets/eazyLetter.png"
-            alt="Project 3"
-            className="object-cover w-1/3 h-auto max-w-full rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg"
+            src="/assets/projects/pigeon.png "
+            alt="Project 2"
+            className="object-contain w-1/3 h-auto max-w-full p-3 rounded-l-lg md:w-1/2 md:rounded-l-none md:rounded-tl-lg "
           />
           <div className="flex flex-col justify-center w-2/3 p-4">
-            <h2 className="mb-4 text-xl font-semibold text-white">
-              Eazy Letter
-            </h2>
-            <p className="mb-4 text-sm text-white text-justify">
-              Our team has created a dynamic letter generator using full-stack
-              technology, tailored to aid students in effortlessly composing
-              letters for various purposes. With customizable templates and
-              intuitive interfaces, our platform simplifies the letter-writing
-              process, ensuring efficiency and professionalism in communication.
+            <h2 className="mb-4 text-xl font-semibold text-white">Pigeon</h2>
+            <p className="mb-4 text-sm text-justify text-white">
+              Pigeon is a real-time chat app employing React.js for frontend,
+              Express.js for backend and MongoDB as database, Socket.io for live
+              connections, and Peer.js for hassle-free voice and video calls by
+              implementing peer-to-peer connection with webRTC. Offering a
+              streamlined user experience, Pigeon is web app for dynamic
+              communication.
             </p>
-            <div className="flex justify-between">
-              <a
-                href="https://github.com/Tarunsaisrinivas/EazyLetter.git"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
+            <a
+              href="https://github.com/ajay2603/Pigeon"
+              target="_blank"
+              rel="noopener noreferrer">
+              <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
                 <FaGithub />
                 Repo
-                </button>
-              </a>
-            </div>
+              </button>
+            </a>
           </div>
         </div>
 

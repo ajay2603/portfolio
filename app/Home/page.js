@@ -43,31 +43,30 @@ const Home = ({ darkMode }) => {
       id="home"
       className={`min-h-screen dark:bg-white bg-gray-800 ${
         darkMode ? "bg-white" : ""
-      }`}
-    >
+      }`}>
       {contextHolder}
       <div className="container flex flex-col items-center justify-between px-8 py-16 mx-auto dark:bg-[#edf2f4] md:flex-row md:py-28">
         {/* Text Content */}
         <div
           className="text-center text-white md:text-left md:w-1/2"
-          data-aos="fade-right"
-        >
+          data-aos="fade-right">
           <h1
             className={`mb-8 text-4xl font-bold ${
               darkMode ? "text-gray-800" : ""
-            } md:text-5xl lg:text-6xl`}
-          >
+            } md:text-5xl lg:text-6xl`}>
             Hi, I'm <br className="md:hidden" />
-            Tarun Sai Srinivas
+            Atchuta Rama Raju
           </h1>
           <div
             className={`mb-8 text-2xl font-bold ${
               darkMode ? "text-red-600" : ""
-            } text-blue-400`}
-          >
+            } text-blue-400`}>
             <Typewriter
               options={{
-                strings: ["Frontend Developer", "UI Developer"],
+                strings: [
+                  "FullStack Developer",
+                  "Cross-Platform Mobile App Developer",
+                ],
                 autoStart: true,
                 loop: true,
               }}
@@ -77,32 +76,30 @@ const Home = ({ darkMode }) => {
           <p
             className={`mb-8 text-lg leading-relaxed text-justify ${
               darkMode ? "text-gray-800" : ""
-            }`}
-          >
-            Hi there! I'm Tarun Sai Srinivas, a passionate Frontend Developer
-            with expertise in React.js. I specialize in crafting dynamic,
-            responsive websites that provide exceptional user experiences. I
-            excel in creating intuitive interfaces from concept to execution,
-            focusing on clean code, modular architecture, and performance
-            optimization.
+            }`}>
+            Hi there! I'm Atchuta Rama Raju Jampana, a passionate Full Stack
+            Developer specializing in the MERN stack, Next.js, and
+            cross-platform mobile app development with React Native and Flutter.
+            I create dynamic, responsive websites and mobile apps with clean
+            code and optimized performance.
             <br />
-            My portfolio includes a variety of projects such as a college
-            department site built with HTML, CSS, and JavaScript, a chat
-            application using React and Firebase with encrypted messaging, and a
-            recipe app featuring an API with a search bar developed in React
-            Native Expo.
+            My portfolio includes a college department site using HTML, CSS, and
+            JavaScript; a chat app built with the MERN stack; a quiz app with
+            EJS, Node.js, and MongoDB; and SafeSprout, a cross-platform app with
+            Flutter and MongoDB, along with Pigeon, another MERN stack chat
+            application.
           </p>
           {/* Buttons */}
           <div className="flex flex-row space-x-4">
             <Button
-              link="https://github.com/Tarunsaisrinivas"
+              link="https://github.com/ajay2603"
               icon={<FaGithub size={30} />}
               className={`border-none md:border-4 md:border-gray-800 ${
                 darkMode ? "bg-[#4a4e69]" : ""
               }`}
             />
             <Button
-              link="https://www.linkedin.com/in/tarun-sai-srinivas"
+              link="https://www.linkedin.com/in/jarraju"
               icon={<FaLinkedin size={30} />}
               className={`border-none md:border-4 md:border-gray-800 ${
                 darkMode ? "bg-[#4a4e69]" : ""
@@ -130,7 +127,7 @@ const Home = ({ darkMode }) => {
             <img
               src="/assets/Cartoon-Avatar-On-Circle-Background-removebg-preview.png"
               alt=""
-              className="m-auto cursor-pointer overflow-x-hidden rounded-full w-40 md:w-64 lg:w-80"
+              className="w-40 m-auto overflow-x-hidden rounded-full cursor-pointer md:w-64 lg:w-80"
             />
           </Tilt>
         </div>
@@ -147,8 +144,7 @@ const Button = ({ link, icon, onClick, className }) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black ${className}`}
-      >
+        className={`flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black ${className}`}>
         <span className="inline-block">{icon}</span>
       </a>
     );
@@ -156,8 +152,7 @@ const Button = ({ link, icon, onClick, className }) => {
   return (
     <button
       onClick={onClick}
-      className={`flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black ${className}`}
-    >
+      className={`flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black ${className}`}>
       <span className="inline-block">{icon}</span>
     </button>
   );
